@@ -5,3 +5,5 @@ git add .
 git commit -m "메시지 하나 적기"
 
 git push [giturl] main
+
+git 
