@@ -1,0 +1,7 @@
+파일 하나 추가
+
+git add .
+
+git commit -m "메시지 하나 적기"
+
+git push [giturl] main
