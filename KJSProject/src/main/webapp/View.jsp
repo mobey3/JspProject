@@ -83,7 +83,7 @@
 <body>
 <div id ="con_body">
 	<div id ="con_right">
-        <div id ="header" style="text-align: center;">    
+        <div id ="header" style="text-align: center;"> <h1 id = "text-align center">Jsp 웹페이지 구현 or 로그인,회원가입</h1>   
         </div>
         <div id = "nav">
             <p>NAVIGATION</p>
