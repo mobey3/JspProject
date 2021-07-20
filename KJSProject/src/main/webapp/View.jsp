@@ -27,7 +27,7 @@
         	margin:3px;
         	padding:3px;
         	width:350px;
-        	height:150px;
+        	height:200px;
             float:left;
         }
 
@@ -102,6 +102,7 @@
         <div id="footer">FOOTER</div>    
     </div>
    <div id ="con_left">
+   <head><h3>로그인</h3></head>
       <form method="post" action="LoginPro.java">
        I D : <input type="text" name="id" maxlength="50"><br><br>
       패스워드: <input type="password" name="passwd" maxlength="16"><br><br>
