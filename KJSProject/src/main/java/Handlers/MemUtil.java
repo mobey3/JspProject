@@ -1,5 +1,8 @@
 package Handlers;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import model.Member;
 import java.sql.Connection;
 
@@ -25,5 +28,43 @@ public class MemUtil {
 		}
 		return -1;
 	}
-
+	
+	public int idCheck(String id) { //1이면 중복. 0이면 중복X. -1이면 중복체크 에러.
+		PreparedStatement pstmt = null;
+		int x = -1;
+		ResultSet rs = null;
+		String temp = "select count(*) from jspmember where id=?";
+		try {
+			pstmt = conn.prepareStatement(temp);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				x = rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return x;
+	}
+	
+	public int nickCheck(String nick) { //1이면 중복. 0이면 중복X. -1이면 중복체크 에러.
+		PreparedStatement pstmt = null;
+		int x = -1;
+		ResultSet rs = null;
+		String temp = "select count(*) from jspmember where nick=?";
+		try {
+			pstmt = conn.prepareStatement(temp);
+			pstmt.setString(1, nick);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				x = rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return x;
+	}
+	
 }

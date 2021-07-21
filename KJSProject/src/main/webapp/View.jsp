@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="EUC-KR">
 <title>Insert title here</title>
 <head>
 <style media ="screen">
@@ -83,7 +83,7 @@
 <body>
 <div id ="con_body">
 	<div id ="con_right">
-        <div id ="header" style="text-align: center;"> <h1 id = "text-align center">Jsp ì›¹íŽ˜ì´ì§€ êµ¬í˜„ or ë¡œê·¸ì¸,íšŒì›ê°€ìž…</h1>   
+        <div id ="header" style="text-align: center;"> <h1 id = "text-align center">Jsp À¥ÆäÀÌÁö ±¸Çö or ·Î±×ÀÎ,È¸¿ø°¡ÀÔ</h1>   
         </div>
         <div id = "nav">
             <p>NAVIGATION</p>
@@ -102,13 +102,15 @@
         <div id="footer">FOOTER</div>    
     </div>
    <div id ="con_left">
-   <head><h3>ë¡œê·¸ì¸</h3></head>
-      <form method="post" action="LoginPro.java">
-       I D : <input type="text" name="id" maxlength="50"><br><br>
-      íŒ¨ìŠ¤ì›Œë“œ: <input type="password" name="passwd" maxlength="16"><br><br>
-      <input type="submit" value="ë¡œê·¸ì¸">
-      <input type="button" value="íšŒì›ê°€ìž…" 
-           onclick="location.href='insertMemberForm.jsp'">
+      <head><h3>·Î±×ÀÎ</h3></head>
+      	<form method="post" action="LogIn.jap">
+       		I D : <input type="text" name="id" maxlength="50"><br><br>
+      		ÆÐ½º¿öµå: <input type="password" name="password" maxlength="16"><br><br>
+      		<input type="submit" value="·Î±×ÀÎ">
+      		<input type="button" value="È¸¿ø°¡ÀÔ" onclick="location.href='insertMemberForm.jsp'">
+       </form>
+       
+       
    </div>
 </div>    
 </body>

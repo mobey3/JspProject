@@ -1,12 +1,11 @@
 package model;
-import java.sql.Connection;
 
 public class Member {
 	
 	private String name;
 	private String nick;
 	private String id;
-	private String passwd;
+	private String password;
 	
 	public String getName() {
 		return name;
@@ -26,11 +25,11 @@ public class Member {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPasswd() {
-		return passwd;
+	public String getPassword() {
+		return password;
 	}
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

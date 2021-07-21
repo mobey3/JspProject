@@ -31,6 +31,7 @@
 			String dbUser = "root";
 			String dbPass = "1234";
 			String query = "select * from user"; // Create DB 
+			/* String query1 = "select * from jspmember"; */
 			conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
 			// Create Statement 
 			stmt = conn.createStatement();

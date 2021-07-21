@@ -1,46 +1,72 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
 <%@ page import="Handlers.MemUtil"%>
-<%@ page import="Handlers.NickUtil" %>
-<%@ page import="Handlers.IdUtil" %>
+<%@ page import="Handlers.NickUtil"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>íšŒì›ê°€ì…</title>
-<style media ="screen">
-		div{
-            margin:5px;
-            padding:5px;
-            border:1px solid #cccccc;
-            width: 1100px;
-            text-align center;
-        	}
-        #con_body{
-        width:1500px;
-        height: 850px;
-        	}
-        #con{
-        	margin:3px;
-        	padding:3px;
-        	width:350px;
-        	height:150px;
-  
+<meta charset="EUC-KR">
+<title>È¸¿ø°¡ÀÔ</title>
+<style media="screen">
+div {
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #cccccc;
+	width: 1100px;
+	text-align
+	center;
+}
+
+#con_body {
+	width: 1500px;
+	height: 850px;
+}
+
+#con {
+	margin: 3px;
+	padding: 3px;
+	width: 350px;
+	height: 225px;
+}
 </style>
 </head>
 <body>
-<div id = "con_body">
-	<head><h2>íšŒì›ê°€ì…</h2></head>
-	<div id = "con">
-  ì´ ë¦„ : <input type="text" name="name" maxlength="50"><br><br>
-  ë‹‰ë„¤ì„ : <input type="text" name="nick" maxlength="50"><input type="submit" 
-  value="ì¤‘ë³µí™•ì¸"onclick="location.href='NickUtil.java'"><br><br>
-   I D : <input type="text" name="id" maxlength="50"><input type="submit" 
-   value="ì¤‘ë³µí™•ì¸"onclick="location.href='IdUtil.java'"><br><br>
-  íŒ¨ìŠ¤ì›Œë“œ: <input type="password" name="passwd" maxlength="16"><br><br>
-  <input type="button" value="íšŒì›ê°€ì…" 
-           onclick="location.href='MemUtil.java'">
-  	</div>
-  </div>
+	<div id="con_body">
+		<head>
+<h2>È¸¿ø°¡ÀÔ</h2>
+		</head>
+		<form action="./joinMem.jsp" method="post"> 
+		<div id="con">
+			ÀÌ ¸§ : <input type="text" name="name" maxlength="50"><br>
+			<br> ´Ğ³×ÀÓ : <input type="text" name ="nick" maxlength="50">
+			<input type="button" value="Áßº¹È®ÀÎ" onclick="Checknick(this.form.nick.value)"><br>
+			<br> I D : <input type="text" name="id" maxlength="50">
+			<input type="button" value="Áßº¹È®ÀÎ" onclick="Checkid(this.form.id.value)"><br>
+			<br> ÆĞ½º¿öµå: <input type="password" name="password" maxlength="16"><br>
+			<br> <input type="submit" value="È¸¿ø°¡ÀÔ">	
+		</div>
+				</form> 
+		<script>
+		function Checkid(id){
+			if(id == ""){
+				alert("¾ÆÀÌµğ¸¦ ¸ÕÀú ÀÔ·ÂÇÏ¼¼¿ä.");
+				document.regForm.id.focus()
+			}
+			else{
+				window.location.href="CheckId.jsp?id=" + id;
+			}
+		}
+		
+		function Checknick(nick){
+			if(nick == ""){
+				alert("´Ğ³×ÀÓÀ» ¸ÕÀú ÀÔ·ÂÇÏ¼¼¿ä.");
+			}
+			else{
+				window.location.href="CheckNick.jsp?nick=" + nick;
+			}
+		}
+		</script>		
+				
+	</div>
 </body>
 </html>

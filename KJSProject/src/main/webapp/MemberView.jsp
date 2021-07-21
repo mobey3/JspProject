@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>М ▄Л⌡░Й╟─Л·┘</title>
+<meta charset="EUC-KR">
+<title>х╦©Ь╟║ют</title>
 <head>
 <style media ="screen">
         div{
@@ -104,10 +104,10 @@
    <div id ="con_left">
 
        I D : <input type="text" name="id" maxlength="50"><br><br>
-      М▄╗Л┼╓Л⌡▄К⌠°: <input type="password" name="passwd" maxlength="16"><br><br>
-      <input type="submit" value="К║°Й╥╦Л²╦">
-      <input type="button" value="М ▄Л⌡░Й╟─Л·┘" 
-           onclick="location.href='insertMemberForm.jsp'">
+      <!-- фп╫╨©Ж╣Е: <input type="password" name="passwd" maxlength="16"><br><br>
+      <input type="submit" value="╥н╠вюн">
+      <input type="button" value="х╦©Ь╟║ют" 
+           onclick="location.href='insertMemberForm.jsp'"> -->
    </div>
 </div>    
 </body>

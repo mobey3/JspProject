@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DatabaseUtil {
+	
 	public static Connection getConnection() {
 		// 데이터베이스와 연결상태 관리
 		try {
@@ -19,5 +20,6 @@ public class DatabaseUtil {
 		}
 		return null;
 	}
+	
 
 }
