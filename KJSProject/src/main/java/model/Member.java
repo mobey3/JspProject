@@ -1,4 +1,5 @@
 package model;
+import java.sql.Connection;
 
 public class Member {
 	
@@ -31,6 +32,5 @@ public class Member {
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-
 	
 }
