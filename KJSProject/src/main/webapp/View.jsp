@@ -26,8 +26,8 @@
         #con_left{
         	margin:3px;
         	padding:3px;
-        	width:350px;
-        	height:200px;
+        	width:300px;
+        	height:150px;
             float:left;
         }
 
@@ -76,7 +76,7 @@
             height:100px;
             line-height:100px;
         }
-        
+     
 
 </style>
 </head>
@@ -102,12 +102,24 @@
         <div id="footer">FOOTER</div>    
     </div>
    <div id ="con_left">
-      <head><h3>로그인</h3></head>
-      	<form method="post" action="LogIn.jap">
-       		I D : <input type="text" name="id" maxlength="50"><br><br>
-      		패스워드: <input type="password" name="password" maxlength="16"><br><br>
-      		<input type="submit" value="로그인">
+      	<form method="post">
+      	<table border="4" align="center" width="300">
+      	<tr>
+      		<th colspan="2">로그인</th>
+      		</tr>
+      		<tr>
+       		<td> I D </td>
+       		 <td><input type="text" name="id" maxlength="50"></td>
+       		 </tr>
+       		 <tr>
+       		 <td>패스워드</td>
+      		 <td><input type="password" name="password" maxlength="50"></td>
+      		</tr>
+      		</table>
+      		<input type="button" value="로그인" onclick="location.href='LogIn.jsp'">
       		<input type="button" value="회원가입" onclick="location.href='insertMemberForm.jsp'">
+   
+      		
        </form>
        
        

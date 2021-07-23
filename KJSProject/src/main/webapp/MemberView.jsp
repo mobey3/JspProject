@@ -102,12 +102,15 @@
         <div id="footer">FOOTER</div>    
     </div>
    <div id ="con_left">
-
-       I D : <input type="text" name="id" maxlength="50"><br><br>
-      <!-- 패스워드: <input type="password" name="passwd" maxlength="16"><br><br>
-      <input type="submit" value="로그인">
-      <input type="button" value="회원가입" 
-           onclick="location.href='insertMemberForm.jsp'"> -->
+	<table>
+	<tr><th colspan="2">좋은하루되세요.</th></tr>
+		<tr>
+		<td>12123</td>
+		</tr>
+		
+		
+	</table>
+      
    </div>
 </div>    
 </body>

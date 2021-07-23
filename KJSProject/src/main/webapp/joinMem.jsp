@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@ page import="model.Member" %>
-<%@ page import="Handlers.MemUtil" %>
+<%@ page import="model.MemberDTO" %>
+<%@ page import="Handlers.MemberDAO" %>
 <%@ page import="java.io.PrintWriter" %>
 
 <!DOCTYPE html>
@@ -12,8 +12,8 @@
 </head>
 <body>
 <%
-    request.setCharacterEncoding("EUC-KR");
-	Member member = new Member();
+request.setCharacterEncoding("EUC-KR");
+	MemberDTO member = new MemberDTO();
 	
     if(request.getParameter("name")!=null)
 	{
@@ -76,9 +76,9 @@
 	
 	
 	//ID와 비밀번호가 모두 있는 경우
-	MemUtil memUtil = new MemUtil();
+	MemberDAO memUtil = new MemberDAO();
 	int result = memUtil.join(member.getName(), 
-			member.getNick(),member.getId(),member.getPassword());
+	member.getNick(),member.getId(),member.getPassword());
 	if(result == 1) //정상적으로 구동된 경우
 	{
 		PrintWriter script = response.getWriter();
@@ -88,9 +88,6 @@
 		script.println("</script>");
 		script.close();
 	}
-			
-	
-	
 %>
 </body>
 </html>

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@ page import="Handlers.MemUtil"%>
-<%@ page import="Handlers.NickUtil"%>
+<%@ page import="Handlers.MemberDAO"%>
 <!DOCTYPE html>
 <html>
 <head>
