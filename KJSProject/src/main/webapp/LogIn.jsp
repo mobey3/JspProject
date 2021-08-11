@@ -22,7 +22,7 @@ String id = request.getParameter("id");
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('로그인 성공!')");
-		script.println("location.href='MemberView.jsp'");
+		script.println("location.href='main.jsp'");
 		script.println("</script>");
 		script.close();
 		return;

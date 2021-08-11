@@ -1,71 +1,83 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<%@ page import="Handlers.MemberDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="EUC-KR">
-<title>»∏ø¯∞°¿‘</title>
-<style media="screen">
-div {
-	margin: 5px;
-	padding: 5px;
-	border: 1px solid #cccccc;
-	width: 1100px;
-	text-align
-	center;
-}
 
-#con_body {
-	width: 1500px;
-	height: 850px;
-}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-#con {
-	margin: 3px;
-	padding: 3px;
-	width: 350px;
-	height: 225px;
-}
-</style>
+    <title>SB Admin 2 - Register</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body>
-	<div id="con_body">
-		<head>
-<h2>»∏ø¯∞°¿‘</h2>
-		</head>
-		<form action="./joinMem.jsp" method="post"> 
-		<div id="con">
-			¿Ã ∏ß : <input type="text" name="name" maxlength="50"><br>
-			<br> ¥–≥◊¿” : <input type="text" name ="nick" maxlength="50">
-			<input type="button" value="¡ﬂ∫π»Æ¿Œ" onclick="Checknick(this.form.nick.value)"><br>
-			<br> I D : <input type="text" name="id" maxlength="50">
-			<input type="button" value="¡ﬂ∫π»Æ¿Œ" onclick="Checkid(this.form.id.value)"><br>
-			<br> ∆–Ω∫øˆµÂ: <input type="password" name="password" maxlength="16"><br>
-			<br> <input type="submit" value="»∏ø¯∞°¿‘">	
-		</div>
-				</form> 
-		<script>
-		function Checkid(id){
-			if(id == ""){
-				alert("æ∆¿Ãµ∏¶ ∏’¿˙ ¿‘∑¬«œººø‰.");
-				document.regForm.id.focus()
-			}
-			else{
-				window.location.href="CheckId.jsp?id=" + id;
-			}
-		}
-		
-		function Checknick(nick){
-			if(nick == ""){
-				alert("¥–≥◊¿”¿ª ∏’¿˙ ¿‘∑¬«œººø‰.");
-			}
-			else{
-				window.location.href="CheckNick.jsp?nick=" + nick;
-			}
-		}
-		</script>		
-				
-	</div>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            </div>
+                            <form class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                            placeholder="ID">
+                                        <input type="button" class="btn btn-primary btn-user btn-block" value="Ï§ëÎ≥µÌôïÏù∏" onclick="CheckId.jsp"><br>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="slrspdla" placeholder="ÎãâÎÑ§ÏûÑ">
+                                    </div>
+                                </div>
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                    ÌöåÏõêÍ∞ÄÏûÖ
+                                </a>
+                              
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
 </body>
+
 </html>
