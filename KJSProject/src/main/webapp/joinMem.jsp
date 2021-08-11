@@ -13,12 +13,9 @@
 <body>
 <%
 request.setCharacterEncoding("EUC-KR");
+
 	MemberDTO member = new MemberDTO();
 	
-    if(request.getParameter("name")!=null)
-	{
-		member.setName(request.getParameter("name"));
-	}
 	if(request.getParameter("nick")!=null)
 	{
 		member.setNick(request.getParameter("nick"));
@@ -32,17 +29,7 @@ request.setCharacterEncoding("EUC-KR");
 		member.setPassword(request.getParameter("password"));
 	}
 	
-	
-	if(member.getName().equals(""))
-	{
-		PrintWriter script = response.getWriter();
-		script.println("<script>");
-		script.println("alert('ID를 입력해주세요.')");
-		script.println("location.href='insertMemberForm.jsp'");
-		script.println("</script>");
-		script.close();
-		return;
-	}
+
 	if(member.getNick().equals(""))
 	{
 		PrintWriter script = response.getWriter();
@@ -77,14 +64,13 @@ request.setCharacterEncoding("EUC-KR");
 	
 	//ID와 비밀번호가 모두 있는 경우
 	MemberDAO memUtil = new MemberDAO();
-	int result = memUtil.join(member.getName(), 
-	member.getNick(),member.getId(),member.getPassword());
+	int result = memUtil.join(member.getNick(),member.getId(),member.getPassword());
 	if(result == 1) //정상적으로 구동된 경우
 	{
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('가입되었습니다.')");
-		script.println("location.href='View.jsp'");
+		script.println("location.href='main.jsp'");
 		script.println("</script>");
 		script.close();
 	}
