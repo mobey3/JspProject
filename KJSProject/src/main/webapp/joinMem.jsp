@@ -70,7 +70,7 @@ request.setCharacterEncoding("EUC-KR");
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('가입되었습니다.')");
-		script.println("location.href='main.jsp'");
+		script.println("location.href='mainView.jsp'");
 		script.println("</script>");
 		script.close();
 	}

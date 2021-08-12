@@ -3,19 +3,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import model.MemberDTO;
-import java.sql.Connection;
-
-
-public class MemberDAO {
-	Connection conn = DatabaseUtil.getConnection();
-
-	public int join(String nick, String id, String password) {
-		String SQL = "INSERT INTO JSPMEMBER VALUES (?,?,?)";
-		try {
-// 각각의 데이터를 실제로 넣어준다. 
-			PreparedStatement pstmt = conn.prepareStatement(SQL);
-// 쿼리문의 ?안에 각각의 데이터를 넣어준다. 
+	import model.MemberDTO;
+	import java.sql.Connection;
+	
+	
+	public class MemberDAO {
+		Connection conn = DatabaseUtil.getConnection();
+	
+		public int join(String nick, String id, String password) {
+			String SQL = "INSERT INTO JSPMEMBER VALUES (?,?,?)";
+			try {
+	// 각각의 데이터를 실제로 넣어준다. 
+				PreparedStatement pstmt = conn.prepareStatement(SQL);
+	// 쿼리문의 ?안에 각각의 데이터를 넣어준다. 
 			pstmt.setString(1, nick);
 			pstmt.setString(2, id);
 			pstmt.setString(3, password);

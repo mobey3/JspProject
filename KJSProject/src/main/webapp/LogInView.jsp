@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>SB Admin 2 - Login</title>
+<title>회원가입</title>
 
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
@@ -45,27 +45,18 @@
 									<div class="text-center">
 										<h1 class="h4 text-gray-900 mb-4">Welcome RIKA!</h1>
 									</div>
-									<form class="user">
+									<form class="user" action="./LogIn.jsp">
 										<div class="form-group">
-											<input type="text" name="id"
-												class="form-control form-control-user"
-												id="User_ID" placeholder="User_ID">
+											<input type="text" class="form-control form-control-user"
+												name="id" placeholder="User_ID">
 										</div>
 										<div class="form-group">
-											<input type="password" name="password"
-												class="form-control form-control-user" id="User_Password"
-												placeholder="Password">
+											<input type="password" class="form-control form-control-user"
+												name="password" placeholder="User_Password">
 										</div>
-										<div class="form-group">
-											<div class="custom-control custom-checkbox small">
-												<input type="checkbox" class="custom-control-input"
-													id="customCheck">
 
-											</div>
-										</div>
-										<a href="LogIn.jsp" class="btn btn-primary btn-user btn-block">
-											로그인 </a> <a href="insertMemberForm.jsp"
-											class="btn btn-primary btn-user btn-block"> 회원가입 </a>
+										<input type="submit" class="btn btn-primary btn-user btn-block" value="로그인"> 
+										<a href="mainView.jsp" class="btn btn-primary btn-user btn-block"> 뒤로가기 </a>
 
 									</form>
 
